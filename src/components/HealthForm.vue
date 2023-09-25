@@ -37,22 +37,6 @@
             <b-form-select v-model="user.blood_group" :options="bloodGroups"></b-form-select>
           </div>
         </b-col>
-        <b-col md="6" sm="12">
-          <div class="form-group">
-            <p class="label">Last Donated Blood</p>
-            <b-form-datepicker
-              v-model="user.last_donated_blood"
-              menu-class="w-100"
-              calendar-width="100%"
-              placeholder="Choose date of birth"
-              :date-format-options="{
-                day: '2-digit',
-                year: 'numeric',
-                month: 'short',
-              }"
-            ></b-form-datepicker>
-          </div>
-        </b-col>
         <b-col md="12" sm="12">
           <div class="text-right my-2">
             <b-button variant="outline-primary"> Save Changes </b-button>
@@ -66,6 +50,12 @@
 <script>
 export default {
   name: "HealthForm",
+  props: {
+    health: {
+      type: Object,
+      default: () => {},
+    },
+  },
   data() {
     return {
       user: {},
@@ -80,6 +70,14 @@ export default {
         { value: "O-", text: "O negative" },
       ],
     };
+  },
+  mounted() {
+    this.setData();
+  },
+  methods: {
+    setData() {
+      this.user = this.health;
+    },
   },
 };
 </script>
