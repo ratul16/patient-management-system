@@ -2,7 +2,7 @@
   <b-navbar toggleable="lg" type="dark" variant="dark">
     <b-container>
       <b-navbar-brand href="#">
-        <img src="/icon.png" alt="" srcset="" />
+        <LogoSvg />
       </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
