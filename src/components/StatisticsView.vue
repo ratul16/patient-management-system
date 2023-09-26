@@ -42,6 +42,7 @@
 <script>
 import StatisticsCard from "./StatisticsCard.vue";
 export default {
+  name: "StatisticsView",
   components: { StatisticsCard },
   props: {
     stats: {
@@ -49,7 +50,6 @@ export default {
       default: () => {},
     },
   },
-  name: "StatisticsView",
 };
 </script>
 

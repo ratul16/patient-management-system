@@ -1,7 +1,5 @@
 <template>
   <div class="profile">
-    <h2>User Profile</h2>
-    <!-- {{ store.user }} -->
     <b-row align-v="start" align-h="between">
       <b-col md="8" sm="12">
         <div class="profile-info shadow-sm">

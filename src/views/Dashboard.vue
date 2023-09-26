@@ -1,23 +1,39 @@
 <template>
   <div class="dashboard">
-    <StatisticsView :stats="stats" class="mb-3" />
-    <!-- <div class="charts-list mb-3">
-      <BarChart />
-      <LineChart />
-      <div class="slider">
-        <CarouselSlider />
-      </div>
-    </div> -->
+    <b-row no-gutters class="layout" align-v="start">
+      <b-col md="12" sm="12">
+        <div class="section-info">
+          <BannerSection />
+          <ScheduleBoard />
+        </div>
+      </b-col>
+      <b-col md="12" sm="12">
+        <StatisticsView :stats="stats" class="mb-3" />
+      </b-col>
+      <b-col md="12" sm="12">
+        <div class="section-list">
+          <AppointmentHistory />
+          <RecentReports />
+        </div>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
 <script>
-import BarChart from "../components/BarChart.vue";
-import LineChart from "../components/LineChart.vue";
 import StatisticsView from "../components/StatisticsView.vue";
-import CarouselSlider from "../components/CarouselSlider.vue";
+import BannerSection from "../components/BannerSection.vue";
+import ScheduleBoard from "../components/ScheduleBoard.vue";
+import AppointmentHistory from "../components/AppointmentHistory.vue";
+import RecentReports from "../components/RecentReports.vue";
 export default {
-  components: { StatisticsView, BarChart, LineChart, CarouselSlider },
+  components: {
+    StatisticsView,
+    BannerSection,
+    ScheduleBoard,
+    AppointmentHistory,
+    RecentReports,
+  },
   name: "DashboardView",
   data() {
     return {
@@ -62,6 +78,47 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.dashboard {
+  .layout {
+    gap: 10px;
+    .section-info {
+      gap: 10px;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      div {
+        min-height: 100%;
+      }
+    }
+    .section-list {
+      gap: 10px;
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+      div {
+        min-height: 100%;
+      }
+    }
+  }
+}
+
+@include media-queries("tab") {
+  .dashboard {
+    .layout {
+      .section-info {
+        grid-template-columns: 2fr 2fr;
+      }
+    }
+  }
+}
+@include media-queries("tab-sm") {
+  .dashboard {
+    .layout {
+      .section-info,
+      .section-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
 .slider {
   max-height: 400px;
   position: relative;
