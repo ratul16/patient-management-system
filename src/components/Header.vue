@@ -9,10 +9,23 @@
         <li class="breadcrumb-item">{{ $route.name }}</li>
       </ol>
     </div>
-    <div class="right-side d-flex">
+    <div class="right-side d-flex align-items-center">
+      <a
+        href="https://github.com/ratul16/patient-management-system"
+        target="_blank"
+        class="px-2 mr-2"
+      >
+        <i class="fa-brands fa-github"></i>
+      </a>
       <div class="notification px-2 mr-2">
         <!-- <i class="fa-solid fa-bell fa-shake"></i> -->
-        <i class="fa-solid fa-bell"></i>
+        <b-dropdown variant="link" toggle-class="text-decoration-none p-0" right no-caret>
+          <template #button-content>
+            <i class="fa-solid fa-bell"></i>
+          </template>
+          <b-dropdown-item href="#"> Docker's Appointment Booked </b-dropdown-item>
+          <b-dropdown-item href="#">Medical Test Booked</b-dropdown-item>
+        </b-dropdown>
       </div>
       <div class="logout px-2">
         <i class="fa-solid fa-right-from-bracket"></i>
@@ -50,12 +63,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 16px;
+  padding: 16px;
   border-radius: 10px;
-  // border: 1px solid $brand-color-light;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 
   i {
+    font-size: 18px;
     color: $brand-color-dark;
   }
   .breadcrumb {

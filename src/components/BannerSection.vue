@@ -6,7 +6,7 @@
         Ensure your well-being by letting us assess your health. Take proactive steps towards a
         healthier life starting today for a brighter future.
       </p>
-      <b-button variant="primary"> Contact Doctor </b-button>
+      <b-button variant="outline-primary"> Contact Doctor </b-button>
     </div>
   </div>
 </template>
