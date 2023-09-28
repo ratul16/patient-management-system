@@ -8,7 +8,7 @@
         </div>
       </b-col>
       <b-col md="12" sm="12">
-        <StatisticsView :stats="stats" class="mb-3" />
+        <HealthOverview :health-stats="health" />
       </b-col>
       <b-col md="12" sm="12">
         <div class="section-list">
@@ -21,14 +21,14 @@
 </template>
 
 <script>
-import StatisticsView from "../components/StatisticsView.vue";
+import HealthOverview from "../components/HealthOverview.vue";
 import BannerSection from "../components/BannerSection.vue";
 import ScheduleBoard from "../components/ScheduleBoard.vue";
 import AppointmentHistory from "../components/AppointmentHistory.vue";
 import RecentReports from "../components/RecentReports.vue";
 export default {
   components: {
-    StatisticsView,
+    HealthOverview,
     BannerSection,
     ScheduleBoard,
     AppointmentHistory,
@@ -37,6 +37,32 @@ export default {
   name: "DashboardView",
   data() {
     return {
+      health: [
+        {
+          name: "Blood Pressure",
+          icon: "fa-gauge",
+          value: "110 / 70",
+          caption: "10% higher than last month",
+        },
+        {
+          name: "Heart Rate",
+          icon: "fa-heart-pulse",
+          value: "85 bpm",
+          caption: "5% less than last month",
+        },
+        {
+          name: "Glucose Level",
+          icon: "fa-wave-square",
+          value: "75 - 90",
+          caption: "5% lower than last month",
+        },
+        {
+          name: "Blood Count",
+          icon: "fa-chart-simple",
+          value: "9,456 /ml",
+          caption: "10% higher than last month",
+        },
+      ],
       stats: {
         money: {
           title: "Today's Sales",
