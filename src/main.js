@@ -8,6 +8,15 @@ import router from "./router";
 // Import Bootstrap and BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+import 'flatpickr/dist/flatpickr.css';
+// datePickerConfig: {
+//   mode: 'range',
+//     wrap: true,
+//       altFormat: 'j M, Y',
+//         altInput: true,
+//           dateFormat: 'Y-m-d',
+//             conjunction: '-',
+//       }
 
 
 const pinia = createPinia();
