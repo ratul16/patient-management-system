@@ -1,11 +1,13 @@
 <template>
   <div class="appointment">
-    <h2>appointment</h2>
+    <AppointmentForm />
   </div>
 </template>
 
 <script>
+import AppointmentForm from "../components/AppointmentForm.vue";
 export default {
+  components: { AppointmentForm },
   name: "AppointmentView",
 };
 </script>
