@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1234,
+    "name": "John Doe",
+    "age": 35,
+    "gender": "Male",
+    "diagnosis": "Hypertension",
+    "doctor": "Dr. Smith"
+  },
+  {
+    "id": 5678,
+    "name": "Jane Smith",
+    "age": 28,
+    "gender": "Female",
+    "diagnosis": "Diabetes",
+    "doctor": "Dr. Johnson"
+  },
+  {
+    "id": 9101,
+    "name": "Michael Johnson",
+    "age": 45,
+    "gender": "Male",
+    "diagnosis": "Asthma",
+    "doctor": "Dr. Williams"
+  },
+  {
+    "id": 2345,
+    "name": "Emily Davis",
+    "age": 42,
+    "gender": "Female",
+    "diagnosis": "Migraine",
+    "doctor": "Dr. Brown"
+  },
+  {
+    "id": 6789,
+    "name": "David Garcia",
+    "age": 50,
+    "gender": "Male",
+    "diagnosis": "Arthritis",
+    "doctor": "Dr. Martinez"
+  },
+  {
+    "id": 1230,
+    "name": "Sophia Wilson",
+    "age": 30,
+    "gender": "Female",
+    "diagnosis": "Anxiety",
+    "doctor": "Dr. Anderson"
+  },
+  {
+    "id": 4567,
+    "name": "Robert Lee",
+    "age": 65,
+    "gender": "Male",
+    "diagnosis": "Chronic Obstructive Pulmonary Disease (COPD)",
+    "doctor": "Dr. Harris"
+  },
+  {
+    "id": 8910,
+    "name": "Olivia Taylor",
+    "age": 20,
+    "gender": "Female",
+    "diagnosis": "Allergies",
+    "doctor": "Dr. White"
+  },
+  {
+    "id": 3456,
+    "name": "Ethan Moore",
+    "age": 48,
+    "gender": "Male",
+    "diagnosis": "Depression",
+    "doctor": "Dr. Turner"
+  },
+  {
+    "id": 7891,
+    "name": "Ava Thomas",
+    "age": 25,
+    "gender": "Female",
+    "diagnosis": "Eczema",
+    "doctor": "Dr. Hall"
+  }
+]

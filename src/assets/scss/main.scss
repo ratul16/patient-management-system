@@ -55,3 +55,13 @@
   background-color: $white;
   padding: 16px;
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 991px) {
+  ::v-deep .b-sidebar {
+    width: 100% !important;
+  }
+}

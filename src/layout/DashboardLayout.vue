@@ -32,6 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 .dashboard-layout {
+  background: $background;
   display: flex;
   main {
     flex: 1 1 0;
