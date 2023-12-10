@@ -1,0 +1,121 @@
+[
+    {
+      "report_id": "PR001",
+      "patient_id": 1234,
+      "date": "2023-10-15",
+      "doctor": "Dr. Smith",
+      "diagnosis": "Hypertension",
+      "notes": "Patient's blood pressure readings were slightly elevated. Advised lifestyle changes and medication.",
+      "medications_prescribed": ["MedA", "MedB"],
+      "tests_conducted": ["Blood pressure", "Cholesterol"],
+      "follow_up_required": true,
+      "follow_up_date": "2023-11-15"
+    },
+    {
+      "report_id": "PR002",
+      "patient_id": 5678,
+      "date": "2023-11-02",
+      "doctor": "Dr. Johnson",
+      "diagnosis": "Diabetes",
+      "notes": "Patient's blood sugar levels are within target range. Recommended dietary adjustments and regular monitoring.",
+      "medications_prescribed": ["Insulin"],
+      "tests_conducted": ["Glucose level", "HbA1c"],
+      "follow_up_required": false
+    },
+    {
+      "report_id": "PR003",
+      "patient_id": 9101,
+      "date": "2023-09-28",
+      "doctor": "Dr. Williams",
+      "diagnosis": "Asthma",
+      "notes": "Patient experienced mild asthma symptoms. Prescribed inhaler and advised avoidance of triggers.",
+      "medications_prescribed": ["Inhaler"],
+      "tests_conducted": ["Lung function test"],
+      "follow_up_required": true,
+      "follow_up_date": "2023-10-15"
+    },
+    {
+      "report_id": "PR004",
+      "patient_id": 2345,
+      "date": "2023-08-20",
+      "doctor": "Dr. Brown",
+      "diagnosis": "Migraine",
+      "notes": "Patient complained of frequent headaches. Recommended stress management techniques and pain relief medication.",
+      "medications_prescribed": ["Painkillers"],
+      "tests_conducted": ["Neurological exam"],
+      "follow_up_required": true,
+      "follow_up_date": "2023-09-20"
+    },
+    {
+      "report_id": "PR005",
+      "patient_id": 6789,
+      "date": "2023-07-12",
+      "doctor": "Dr. Martinez",
+      "diagnosis": "Arthritis",
+      "notes": "Patient reported joint pain and stiffness. Prescribed anti-inflammatory medication and advised gentle exercises.",
+      "medications_prescribed": ["Anti-inflammatory"],
+      "tests_conducted": ["Joint mobility test"],
+      "follow_up_required": true,
+      "follow_up_date": "2023-08-12"
+    },
+    {
+      "report_id": "PR006",
+      "patient_id": 1230,
+      "date": "2023-06-25",
+      "doctor": "Dr. Anderson",
+      "diagnosis": "Anxiety",
+      "notes": "Patient exhibited symptoms of anxiety. Recommended counseling and relaxation techniques.",
+      "medications_prescribed": ["Anti-anxiety"],
+      "tests_conducted": ["Anxiety assessment"],
+      "follow_up_required": true,
+      "follow_up_date": "2023-07-25"
+    },
+    {
+      "report_id": "PR007",
+      "patient_id": 4567,
+      "date": "2023-05-19",
+      "doctor": "Dr. Harris",
+      "diagnosis": "COPD",
+      "notes": "Patient had difficulty breathing. Prescribed inhaler and advised smoking cessation.",
+      "medications_prescribed": ["Inhaler"],
+      "tests_conducted": ["Pulmonary function test"],
+      "follow_up_required": true,
+      "follow_up_date": "2023-06-19"
+    },
+    {
+      "report_id": "PR008",
+      "patient_id": 8910,
+      "date": "2023-04-08",
+      "doctor": "Dr. White",
+      "diagnosis": "Allergies",
+      "notes": "Patient experienced allergic reactions. Prescribed antihistamines and advised allergy testing.",
+      "medications_prescribed": ["Antihistamines"],
+      "tests_conducted": ["Allergy test"],
+      "follow_up_required": true,
+      "follow_up_date": "2023-05-08"
+    },
+    {
+      "report_id": "PR009",
+      "patient_id": 3456,
+      "date": "2023-03-14",
+      "doctor": "Dr. Turner",
+      "diagnosis": "Depression",
+      "notes": "Patient showed signs of depression. Recommended therapy sessions and prescribed antidepressants.",
+      "medications_prescribed": ["Antidepressants"],
+      "tests_conducted": ["Depression assessment"],
+      "follow_up_required": true,
+      "follow_up_date": "2023-04-14"
+    },
+    {
+      "report_id": "PR010",
+      "patient_id": 7891,
+      "date": "2023-02-05",
+      "doctor": "Dr. Hall",
+      "diagnosis": "Eczema",
+      "notes": "Patient had skin inflammation. Prescribed topical creams and advised skincare routine.",
+      "medications_prescribed": ["Topical creams"],
+      "tests_conducted": ["Skin examination"],
+      "follow_up_required": true,
+      "follow_up_date": "2023-03-05"
+    }
+  ]
