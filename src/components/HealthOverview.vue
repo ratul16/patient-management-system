@@ -1,10 +1,12 @@
 <template>
   <div class="health-overview">
     <div class="custom-card shadow-sm health-card" v-for="(h, index) in healthStats" :key="index">
+      <div class="content">
+        <h5>{{ h.name }}</h5>
+        <span>{{ h.value }}</span>
+        <small class="text-muted">{{ h.caption }}</small>
+      </div>
       <i class="fa-solid" :class="h.icon"></i>
-      <h5>{{ h.name }}</h5>
-      <span>{{ h.value }}</span> <br />
-      <small class="text-muted">{{ h.caption }}</small>
     </div>
   </div>
 </template>
@@ -28,18 +30,23 @@ export default {
   grid-gap: 10px;
 
   .health-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     i {
       color: $brand-color;
       font-size: 40px;
-      margin-bottom: 20px;
+      // margin-bottom: 14px;
     }
     h5 {
       color: $brand-color-dark;
       margin-bottom: 0;
     }
     span {
+      display: block;
       color: $brand-color;
       font-weight: 600;
+      margin-bottom: 0;
     }
   }
 }

@@ -1,0 +1,84 @@
+{
+  "patient": {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "avatar": "https://source.unsplash.com/3prIF_-eDM0/",
+    "info": {
+      "first_name": "John",
+      "last_name": "Doe",
+      "role": "patient",
+      "email": "john.doe@example.com",
+      "password": "",
+      "phone": "+1234567890",
+      "about_me": "I love outdoor activities.",
+      "address": "123 Main Street",
+      "city": "New York",
+      "country": "USA",
+      "postcode": "NK2 3YT",
+      "dob": "1995-05-12",
+      "height": 175.5,
+      "weight": 70.2,
+      "gender": "Male",
+      "blood_group": "A+"
+    },
+    "health": {
+      "diagnosis": [
+        {
+          "name": "Blood Pressure",
+          "icon": "fa-gauge",
+          "value": "110 / 70",
+          "caption": "10% higher than last month"
+        },
+        {
+          "name": "Heart Rate",
+          "icon": "fa-heart-pulse",
+          "value": "85 bpm",
+          "caption": "5% less than last month"
+        },
+        {
+          "name": "Glucose Level",
+          "icon": "fa-wave-square",
+          "value": "75 - 90",
+          "caption": "5% lower than last month"
+        },
+        {
+          "name": "Blood Count",
+          "icon": "fa-chart-simple",
+          "value": "9,456 /ml",
+          "caption": "10% higher than last month"
+        }
+      ],
+      "fitness": {
+          "exercise_duration": 60,
+          "exercise_type": "Cardio"
+      }
+    },
+    "created_at": "2023-09-25 09:15:00",
+    "updated_at": "2023-09-25 09:15:00"
+  },
+  "doctor": {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "avatar": "https://source.unsplash.com/3prIF_-eDM0/",
+    "info": {
+      "first_name": "Holand",
+      "last_name": "Doe",
+      "role": "doctor",
+      "email": "john.doe@example.com",
+      "password": "",
+      "phone": "+1234567890",
+      "about_me": "I love outdoor activities.",
+      "address": "123 Main Street",
+      "city": "New York",
+      "country": "USA",
+      "postcode": "NK2 3YT"
+    },
+    "health": {
+      "dob": "1995-05-12",
+      "height": 175.5,
+      "weight": 70.2,
+      "gender": "Male",
+      "blood_group": "A+"
+    },
+    "created_at": "2023-09-25 09:15:00",
+    "updated_at": "2023-09-25 09:15:00"
+  }
+}

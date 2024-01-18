@@ -1,7 +1,7 @@
 <template>
   <div class="banner shadow-sm">
     <div>
-      <h4 class="mb-3">Welcome John Doe</h4>
+      <h4 class="mb-2">Welcome {{ name }}</h4>
       <p>
         Ensure your well-being by letting us assess your health. Take proactive steps towards a
         healthier life starting today for a brighter future.
@@ -14,6 +14,12 @@
 <script>
 export default {
   name: "BannerSection",
+  props: {
+    name: {
+      type: String,
+      default: "",
+    },
+  },
 };
 </script>
 
@@ -21,7 +27,7 @@ export default {
 .banner {
   border-radius: 10px;
   background-color: $white;
-  padding: 26px;
-  border: 1px solid $brand-color-light;
+  padding: 16px;
+  // border: 1px solid $brand-color-light;
 }
 </style>

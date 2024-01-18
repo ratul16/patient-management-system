@@ -21,6 +21,16 @@
         <!-- <i class="fa-solid fa-bell fa-shake"></i> -->
         <b-dropdown variant="link" toggle-class="text-decoration-none p-0" right no-caret>
           <template #button-content>
+            <i class="fa-solid fa-user"></i>
+          </template>
+          <b-dropdown-item @click="getUser('patient')"> Patient </b-dropdown-item>
+          <b-dropdown-item @click="getUser('doctor')"> Doctor </b-dropdown-item>
+        </b-dropdown>
+      </div>
+      <div class="notification px-2 mr-2">
+        <!-- <i class="fa-solid fa-bell fa-shake"></i> -->
+        <b-dropdown variant="link" toggle-class="text-decoration-none p-0" right no-caret>
+          <template #button-content>
             <i class="fa-solid fa-bell"></i>
           </template>
           <b-dropdown-item href="#"> Docker's Appointment Booked </b-dropdown-item>
@@ -35,8 +45,16 @@
 </template>
 
 <script>
+import { useAuthStore } from "../stores/auth";
+
 export default {
   name: "Header",
+  setup() {
+    const store = useAuthStore();
+    return {
+      store,
+    };
+  },
   props: {
     sidebar: {
       type: Boolean,
@@ -52,6 +70,10 @@ export default {
     toggleSidebar() {
       this.toggle = !this.toggle;
       this.$emit("toggleSidebar", this.toggle);
+    },
+    getUser(role) {
+      this.store.updateRole(role);
+      console.log(this.store.user);
     },
   },
 };
