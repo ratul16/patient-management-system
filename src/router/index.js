@@ -53,9 +53,9 @@ const router = new VueRouter({
       },
     },
     {
-      path: "/billings",
-      name: "billings",
-      component: () => import("../views/BillingView.vue"),
+      path: "/medications",
+      name: "medications",
+      component: () => import("../views/MedicationList.vue"),
       meta: {
         layout: true
       },

@@ -36,7 +36,7 @@
 
 <script>
 import patientList from "../data/patient.json";
-import PatientSidebar from "../components/PatientSidebar.vue";
+import PatientSidebar from "../components/patient/PatientSidebar.vue";
 
 export default {
   name: "PatientList",

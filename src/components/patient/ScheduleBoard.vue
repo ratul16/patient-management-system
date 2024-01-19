@@ -36,30 +36,20 @@ export default {
   min-height: 100%;
   background-color: $white;
   border-radius: 10px;
-  // border: 1px solid $brand-color-light;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   overflow: hidden;
+  h4 {
+    color: $brand-color;
+  }
   .body {
     padding: 16px;
-  }
-  .footer {
-    background-color: $white;
-    color: $brand-color-light;
-    border-top: 1px solid $brand-color-light;
-
-    padding: 12px;
-    text-align: center;
-    transition: $transition;
-    cursor: pointer;
-    &:hover {
-      background-color: $brand-color-light;
-      color: $white;
-      border-color: 1px solid transparent;
-    }
   }
   ul {
     list-style-type: none;
     i {
-      color: $brand-color-light;
+      color: $brand-color;
     }
   }
 }

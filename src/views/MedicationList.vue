@@ -1,6 +1,6 @@
 <template>
   <div class="reports">
-    <h2>BillingView</h2>
+    <h2>MedicationList</h2>
   </div>
 </template>
 

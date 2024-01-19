@@ -46,19 +46,19 @@ export default {
           icon: "fa-user-doctor",
         },
         {
-          route: "patients",
-          name: "Patients",
-          icon: "fa-user-injured",
-        },
-        {
           route: "reports",
           name: "Reports",
           icon: "fa-file-contract",
         },
         {
-          route: "billings",
-          name: "Billings",
-          icon: "fa-credit-card",
+          route: "medications",
+          name: "Medications",
+          icon: "fa-pills",
+        },
+        {
+          route: "patients",
+          name: "Patients",
+          icon: "fa-user-injured",
         },
         {
           route: "profile",

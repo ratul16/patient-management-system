@@ -60,6 +60,23 @@
   cursor: pointer;
 }
 
+.footer {
+  background-color: $white;
+  color: $brand-color;
+  border-top: 1px solid $brand-color;
+
+  padding: 12px;
+  text-align: center;
+  transition: $transition;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $brand-color;
+    color: $white;
+    border-color: 1px solid transparent;
+  }
+}
+
 @media screen and (max-width: 991px) {
   ::v-deep .b-sidebar {
     width: 100% !important;

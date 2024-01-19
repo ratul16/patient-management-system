@@ -1,6 +1,5 @@
 <template>
   <div class="patient-layout">
-    <!-- <h4>Patient Layout</h4> -->
     <b-row no-gutters class="layout" align-v="start" v-if="Object.keys(userData).length > 0">
       <b-col md="12" sm="12">
         <div class="section-info">
@@ -9,13 +8,12 @@
         </div>
       </b-col>
       <b-col md="12" sm="12">
-        <!-- <h5>Health Overview</h5> -->
         <HealthOverview :health-stats="userData.health.diagnosis" />
       </b-col>
       <b-col md="12" sm="12">
-        <!-- <h5>Health Overview</h5> -->
         <div class="section-list">
-          <RecentReports />
+          <MedicationCard />
+          <ReportCard />
         </div>
       </b-col>
     </b-row>
@@ -23,11 +21,11 @@
 </template>
 
 <script>
-import HealthOverview from "../components/HealthOverview.vue";
+import HealthOverview from "../components/patient/HealthOverview.vue";
 import BannerSection from "../components/BannerSection.vue";
-import ScheduleBoard from "../components/ScheduleBoard.vue";
-import AppointmentHistory from "../components/AppointmentHistory.vue";
-import RecentReports from "../components/RecentReports.vue";
+import ScheduleBoard from "../components/patient/ScheduleBoard.vue";
+import ReportCard from "../components/patient/ReportCard.vue";
+import MedicationCard from "../components/patient/MedicationCard.vue";
 
 export default {
   name: "PatientLayout",
@@ -41,8 +39,8 @@ export default {
     HealthOverview,
     BannerSection,
     ScheduleBoard,
-    AppointmentHistory,
-    RecentReports,
+    ReportCard,
+    MedicationCard,
   },
   data() {
     return {
@@ -101,7 +99,7 @@ export default {
     .section-list {
       gap: 10px;
       display: grid;
-      grid-template-columns: 2fr 2fr;
+      grid-template-columns: 1fr 2fr;
       div {
         min-height: 100%;
       }
@@ -113,6 +111,9 @@ export default {
   .patient-layout {
     .layout {
       .section-info {
+        grid-template-columns: 2fr 2fr;
+      }
+      .section-list {
         grid-template-columns: 2fr 2fr;
       }
     }
