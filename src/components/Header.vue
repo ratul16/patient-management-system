@@ -37,7 +37,7 @@
           <b-dropdown-item href="#">Medical Test Booked</b-dropdown-item>
         </b-dropdown>
       </div>
-      <div class="logout px-2">
+      <div class="logout px-2 cursor-pointer" @click="$router.push({ name: 'home' })">
         <i class="fa-solid fa-right-from-bracket"></i>
       </div>
     </div>
@@ -45,16 +45,8 @@
 </template>
 
 <script>
-import { useAuthStore } from "../stores/auth";
-
 export default {
   name: "Header",
-  setup() {
-    const store = useAuthStore();
-    return {
-      store,
-    };
-  },
   props: {
     sidebar: {
       type: Boolean,
@@ -70,10 +62,6 @@ export default {
     toggleSidebar() {
       this.toggle = !this.toggle;
       this.$emit("toggleSidebar", this.toggle);
-    },
-    getUser(role) {
-      this.store.updateRole(role);
-      console.log(this.store.user);
     },
   },
 };

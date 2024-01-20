@@ -25,67 +25,28 @@ export default {
   data() {
     return {
       user: {},
-      health: [
+      stats: [
         {
-          name: "Blood Pressure",
-          icon: "fa-gauge",
-          value: "110 / 70",
-          caption: "10% higher than last month",
-        },
-        {
-          name: "Heart Rate",
-          icon: "fa-heart-pulse",
-          value: "85 bpm",
-          caption: "5% less than last month",
-        },
-        {
-          name: "Glucose Level",
-          icon: "fa-wave-square",
-          value: "75 - 90",
-          caption: "5% lower than last month",
-        },
-        {
-          name: "Blood Count",
-          icon: "fa-chart-simple",
-          value: "9,456 /ml",
-          caption: "10% higher than last month",
-        },
-      ],
-      stats: {
-        money: {
-          title: "Today's Sales",
-          value: "$53,000",
-          percentage: "+55",
+          title: "Total doctors",
+          value: "504",
           iconClass: "fa-solid fa-coins",
-          detail: "since yesterday",
-          iconBackground: "bg-primary",
         },
-        users: {
-          title: "Today's Users",
-          value: "2,300",
-          percentage: "+3",
+        {
+          title: "Total Appointments",
+          value: "200",
           iconClass: "fa-solid fa-earth-europe",
-          iconBackground: "bg-danger",
-          detail: "since last week",
         },
-        clients: {
-          title: "New Clients",
-          value: "+3,462",
-          percentage: "-2",
+        {
+          title: "Total Treatments",
+          value: "404",
           iconClass: "fa-solid fa-user",
-          percentageColor: "text-danger",
-          iconBackground: "bg-success",
-          detail: "since last quarter",
         },
-        sales: {
+        {
           title: "Total Sales",
           value: "$103,430",
-          percentage: "+5",
           iconClass: "fa-solid fa-chart-line",
-          iconBackground: "bg-warning",
-          detail: "than last month",
         },
-      },
+      ],
     };
   },
   mounted() {

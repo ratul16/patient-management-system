@@ -76,11 +76,12 @@ export default {
       padding: 20px;
       border-radius: 5px;
       background-color: $white;
-      border: 1px solid $brand-color-light;
+      border: 1px solid $brand-color;
       transition: $transition;
       cursor: pointer;
       gap: 10px;
       i {
+        color: $brand-color;
         font-size: 24px;
       }
       .avatar {
@@ -88,8 +89,11 @@ export default {
         padding: 10px;
       }
       &:hover {
-        background-color: $brand-color-light;
+        background-color: $brand-color;
         color: $white;
+        i {
+          color: $white;
+        }
       }
     }
   }

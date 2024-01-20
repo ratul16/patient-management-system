@@ -55,7 +55,15 @@
   background-color: $white;
   padding: 16px;
 }
+.custom-btn {
+  background-color: $brand-color;
+  color: $white;
+  border: none;
 
+  &:hover {
+    background-color: $brand-color-light;
+  }
+}
 .cursor-pointer {
   cursor: pointer;
 }
