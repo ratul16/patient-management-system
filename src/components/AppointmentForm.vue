@@ -58,7 +58,7 @@
       </b-col>
       <b-col md="12" sm="12">
         <div class="text-right">
-          <b-button variant="primary"> Book Appointment </b-button>
+          <b-button variant="primary" class="custom-btn"> Book Appointment </b-button>
         </div>
       </b-col>
     </b-row>
@@ -75,7 +75,7 @@ export default {
       selectedTime: null,
       selectedDate: null,
       condition: "",
-      disabledDays: ["2023-10-26", "2023-10-27"],
+      disabledDays: ["2024-10-26", "2024-10-27"],
       minDate: moment().format("YYYY-MM-DD"),
       maxDate: moment().endOf("month").format("YYYY-MM-DD"),
       timeSlots: [

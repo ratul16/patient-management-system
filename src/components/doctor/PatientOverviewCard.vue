@@ -51,7 +51,7 @@
           <div class="symptoms">
             <h6>Symptoms</h6>
             <div>
-              <span v-for="s in patientData.symptoms" :key="s"> {{ s }} </span>
+              <small v-for="s in patientData.symptoms" :key="s"> {{ s }} </small>
             </div>
           </div>
           <hr />
@@ -106,8 +106,8 @@
             <div class="symptoms">
               <h6>Symptoms</h6>
               <div>
-                <span> Fever </span>
-                <span> Cold </span>
+                <small> Fever </small>
+                <small> Cold </small>
               </div>
             </div>
             <hr />
@@ -185,7 +185,7 @@ export default {
         flex-wrap: wrap;
         gap: 10px;
       }
-      span {
+      small {
         border-radius: 6px;
         padding: 4px 16px;
         background-color: $border-variant-5;
