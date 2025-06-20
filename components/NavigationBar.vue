@@ -20,11 +20,12 @@ function toggleSidebar() {
           @click="toggleSidebar()"
         >
           <UIcon
-            :name="isSidebarExpanded ? 'lucide:chevron-left' : 'lucide:chevron-right'"
-            class="size-6"
+            name="lucide:chevron-right"
+            class="size-6 transition-transform duration-300 ease-in-out"
+            :class="{ 'rotate-180': isSidebarExpanded, 'rotate-0': !isSidebarExpanded }"
           />
         </div>
-        <span> Pages / </span>
+        <span class="text-muted"> Pages / </span>
         <span class="capitalize">{{ $route.name }} </span>
       </div>
 

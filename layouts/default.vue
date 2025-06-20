@@ -19,7 +19,7 @@ const links = ref([
 
     <div
       :class="{
-        'ml-64': isSidebarExpanded,
+        'ml-50': isSidebarExpanded,
         'ml-20': !isSidebarExpanded,
       }"
       class="flex-1 flex flex-col min-h-screen transition-all duration-300 ease-in-out"

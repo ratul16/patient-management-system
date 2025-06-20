@@ -4,6 +4,8 @@
 .nuxt
 .nitro
 .cache
+.eslintcache
+eslintcache
 dist
 
 # Node dependencies

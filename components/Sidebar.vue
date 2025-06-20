@@ -21,18 +21,18 @@ const sidebarLinks = [
 <template>
   <aside
     :class="{
-      'w-64': isExpanded, // This sets the width
+      'w-50': isExpanded, // This sets the width
       'w-20': !isExpanded, // This applies the transition to the width property
     }"
-    class="bg-white h-screen fixed top-0 left-0 shadow-lg flex flex-col pt-4 overflow-hidden transition-width duration-300 ease-in-out"
+    class="bg-white h-screen fixed top-0 left-0 shadow-lg flex flex-col pt-4 overflow-hidden transition-width duration-300 ease-in-out rounded-tr-lg rounded-br-lg"
   >
     <div
-      class="px-4 pb-8 flex items-center"
-      :class="{ 'justify-start': isExpanded, 'justify-center': !isExpanded }"
+      class="px-4 flex items-center"
+      :class="{ 'justify-start mb-8': isExpanded, 'justify-center': !isExpanded }"
     >
-      <img v-if="isExpanded" src="/logo.png" alt="Hospital" class="h-10 w-10 mr-2" />
-      <img v-else src="/logo.png" alt="Hospital" class="h-10 w-10" />
-      <span v-if="isExpanded" class="text-xl font-semibold text-gray-800">Dashboard</span>
+      <!-- <img v-if="isExpanded" src="/logo.png" alt="Hospital" class="h-10 w-10 mr-2" /> -->
+      <BrandLogo class="h-16 w-16" />
+      <!-- <span v-if="isExpanded" class="text-xl font-semibold text-gray-800">Dashboard</span> -->
     </div>
 
     <nav class="flex-1 overflow-y-auto overflow-x-hidden">
