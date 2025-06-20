@@ -8,6 +8,8 @@ export default defineNuxtConfig({
     'nuxt-delay-hydration',
     '@nuxtjs/color-mode',
     '@nuxt/fonts',
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
   ],
   devtools: { enabled: true },
 
@@ -47,5 +49,9 @@ export default defineNuxtConfig({
         sortConfigKeys: true,
       },
     },
+  },
+
+  pinia: {
+    storesDirs: ['./stores/**'],
   },
 })
