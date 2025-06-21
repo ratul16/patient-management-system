@@ -1,4 +1,24 @@
-<script setup></script>
+<script setup>
+const items = ref([
+  {
+    label: 'Profile',
+    icon: 'fa-user',
+    route: '/profile',
+    external: false,
+  },
+  {
+    label: 'github',
+    icon: 'fa-github',
+    route: 'https://github.com/ratul16/patient-management-system',
+    external: true,
+  },
+  {
+    label: 'logout',
+    icon: 'fa6-solid:right-from-bracket',
+    external: false,
+  },
+])
+</script>
 
 <template>
   <nav
@@ -12,7 +32,17 @@
       </div>
 
       <!-- Right side controls -->
-      <div class="flex items-center space-x-2 md:order-2">
+      <div class="flex items-center md:order-2">
+        <NuxtLink
+          v-for="item in items"
+          :key="item.label"
+          :to="item.route"
+          :external="item.external"
+          :target="item.external ? '_blank' : ''"
+          class="leading-none p-2"
+        >
+          <UIcon :name="item.icon" class="nav-item" />
+        </NuxtLink>
         <ColorModeButton />
       </div>
     </div>
@@ -20,12 +50,9 @@
 </template>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s ease;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
+@reference '@/assets/css/main.css';
+
+.nav-item {
+  @apply size-5 text-brand-primary hover:scale-115 transition-transform duration-200 cursor-pointer dark:text-white;
 }
 </style>

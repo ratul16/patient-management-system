@@ -19,7 +19,7 @@ function startViewTransition(event) {
   const y = event.clientY
   const endRadius = Math.hypot(
     Math.max(x, window.innerWidth - x),
-    Math.max(y, window.innerHeight - y),
+    Math.max(y, window.innerHeight - y)
   )
 
   const transition = document.startViewTransition(() => {
@@ -36,7 +36,7 @@ function startViewTransition(event) {
         duration,
         easing: 'cubic-bezier(.76,.32,.29,.99)',
         pseudoElement: '::view-transition-new(root)',
-      },
+      }
     )
   })
 }
@@ -46,7 +46,7 @@ function startViewTransition(event) {
   <ClientOnly>
     <button
       :aria-label="`Switch to ${nextTheme} mode`"
-      class="flex p-2 rounded-full text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 transition-colors duration-300 cursor-pointer"
+      class="flex p-2 rounded-full text-brand-primary dark:text-white hover:text-white hover:bg-brand-primary transition-colors duration-300 cursor-pointer"
       @click="startViewTransition"
     >
       <Icon :name="`i-lucide-${nextTheme === 'dark' ? 'sun' : 'moon'}`" class="size-5 w-5 h-5" />
