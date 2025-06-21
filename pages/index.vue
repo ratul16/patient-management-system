@@ -1,4 +1,9 @@
-<script setup></script>
+<script setup>
+definePageMeta({
+  name: 'Dashboard',
+  title: 'Dashboard',
+})
+</script>
 
 <template>
   <div class="container mx-auto">

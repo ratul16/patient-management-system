@@ -1,15 +1,13 @@
 <script setup>
-const store = useGlobalStore()
+// No need to import sidebar store if there's no dynamic state or toggle
+// import { useGlobalStore } from '~/stores/global'
 
-const isExpanded = computed(() => store.isExpanded)
+// If you have a prop for links, you can define it, or hardcode them here.
+// const sidebarStore = useGlobalStore() // No longer needed if not dynamic
+// const isExpanded = computed(() => sidebarStore.isExpanded) // No longer needed
 
-function toggleSidebar() {
-  store.toggleSidebar()
-}
-
-// Example links for your sidebar. You can make this dynamic if needed.
 const sidebarLinks = [
-  { label: 'Dashboard', icon: 'i-heroicons-squares-2x2', to: '/dashboard' }, // Example icon, replace with your actual icon component or class
+  { label: 'Dashboard', icon: 'i-heroicons-squares-2x2', to: '/' },
   { label: 'Appointments', icon: 'i-heroicons-calendar', to: '/appointments' },
   { label: 'Reports', icon: 'i-heroicons-document-text', to: '/reports' },
   { label: 'Medications', icon: 'i-heroicons-beaker', to: '/medications' },
@@ -20,78 +18,32 @@ const sidebarLinks = [
 
 <template>
   <aside
-    :class="{
-      'w-50': isExpanded, // This sets the width
-      'w-20': !isExpanded, // This applies the transition to the width property
-    }"
-    class="bg-white h-screen fixed top-0 left-0 shadow-lg flex flex-col pt-4 overflow-hidden transition-width duration-300 ease-in-out rounded-tr-lg rounded-br-lg"
+    class="w-20 bg-white h-screen fixed top-0 left-0 shadow-lg flex flex-col pt-4 overflow-hidden"
   >
-    <div
-      class="px-4 flex items-center"
-      :class="{ 'justify-start mb-8': isExpanded, 'justify-center': !isExpanded }"
-    >
-      <!-- <img v-if="isExpanded" src="/logo.png" alt="Hospital" class="h-10 w-10 mr-2" /> -->
-      <BrandLogo class="h-16 w-16" />
-      <!-- <span v-if="isExpanded" class="text-xl font-semibold text-gray-800">Dashboard</span> -->
+    <div class="px-4 pb-8 flex items-center justify-center">
+      <img src="/logo.png" alt="Hospital" class="h-10 w-10" />
     </div>
 
-    <nav class="flex-1 overflow-y-auto overflow-x-hidden">
+    <nav class="flex-1 overflow-y-auto">
       <ul>
         <li v-for="link in sidebarLinks" :key="link.label">
           <NuxtLink
             :to="link.to"
-            class="flex items-center py-3 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
-            :class="{
-              'justify-start': isExpanded,
-              'justify-center': !isExpanded,
-              'bg-blue-50 text-blue-600': $route.path === link.to,
-            }"
+            class="flex items-center justify-center py-3 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+            :class="{ 'bg-blue-50 text-blue-600': $route.path === link.to }"
           >
-            <UIcon :name="link.icon" class="w-6 h-6 flex-shrink-0" />
-            <span v-if="isExpanded" class="ml-4 whitespace-nowrap">{{ link.label }}</span>
+            <UIcon :name="link.icon" :class="[, 'w-6 h-6 flex-shrink-0']" />
           </NuxtLink>
         </li>
       </ul>
     </nav>
 
-    <div
-      class="p-4 border-t border-gray-200 flex"
-      :class="{ 'justify-end': isExpanded, 'justify-center': !isExpanded }"
-    >
-      <button
-        class="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-200"
-        @click="toggleSidebar"
-      >
-        <svg
-          v-if="isExpanded"
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6 text-gray-600"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M15 19l-7-7 7-7"
-          />
-        </svg>
-        <svg
-          v-else
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6 text-gray-600"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
+    <div class="p-4 border-t border-gray-200 flex justify-center">
+      <button class="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-200">
+        <UIcon name="lucide:chevron-right" class="size-6 text-gray-600" />
       </button>
     </div>
   </aside>
 </template>
 
-<style scoped>
-/* You can add any specific styles here if needed, but Tailwind handles most of it. */
-</style>
+<style scoped></style>

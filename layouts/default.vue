@@ -1,10 +1,6 @@
 <script setup>
 import NavigationBar from '~/components/NavigationBar.vue'
-import LayoutSidebar from '~/components/Sidebar.vue' // Assuming you renamed LayoutSidebar to Sidebar
-import { useGlobalStore } from '~/stores/global' // Import your global store
-
-const globalStore = useGlobalStore() // Initialize the store
-const isSidebarExpanded = computed(() => globalStore.isExpanded) // Get the state
+import LayoutSidebar from '~/components/Sidebar.vue' // Confirming component name
 
 const links = ref([
   { label: 'Home', to: '/' },
@@ -17,17 +13,12 @@ const links = ref([
   <div class="flex">
     <LayoutSidebar />
 
-    <div
-      :class="{
-        'ml-50': isSidebarExpanded,
-        'ml-20': !isSidebarExpanded,
-      }"
-      class="flex-1 flex flex-col min-h-screen transition-all duration-300 ease-in-out"
-      style="will-change: margin"
-    >
+    <div class="ml-20 flex-1 flex flex-col min-h-screen">
       <main class="flex-1 p-4 bg-gray-100 dark:bg-gray-900">
         <NavigationBar :links="links" />
-        <slot />
+        <div class="py-4">
+          <slot />
+        </div>
       </main>
     </div>
   </div>
