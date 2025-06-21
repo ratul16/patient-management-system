@@ -15,7 +15,7 @@ const sidebarLinks = [
   <aside
     class="w-16 bg-white dark:bg-gray-900 h-screen fixed top-0 left-0 shadow-lg flex flex-col rounded-tr-2xl rounded-br-2xl overflow-hidden"
   >
-    <div class="mt-8 mb-6 flex items-center justify-center">
+    <div class="mt-4 mb-8 flex items-center justify-center">
       <BrandLogo class="w-10 h-10" />
     </div>
 
