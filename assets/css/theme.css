@@ -1,9 +1,17 @@
 @theme {
   --font-sans: 'Roboto', sans-serif;
+
+  --breakpoint-3xl: 1920px;
+
+  --color-brand-primary: #293c5a;
+  --color-brand-primary-light: #355fa9;
+  --color-brand-secondary: #3b8ac5;
+  --color-border-color: #dbe0ef;
+  --color-text: #38393d;
 }
 
 :root {
-  --ui-primary: var(--ui-color-primary-500);
+  --ui-primary: var(--color-brand-primary);
   --ui-secondary: var(--ui-color-secondary-500);
   --ui-success: var(--ui-color-success-500);
   --ui-info: var(--ui-color-info-500);
@@ -12,7 +20,7 @@
 }
 
 .dark {
-  --ui-primary: var(--ui-color-primary-400);
+  --ui-primary: var(--color-brand-primary-light);
   --ui-secondary: var(--ui-color-secondary-400);
   --ui-success: var(--ui-color-success-400);
   --ui-info: var(--ui-color-info-400);

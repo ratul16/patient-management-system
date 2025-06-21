@@ -1,7 +1,9 @@
 <script setup></script>
 
 <template>
-  <nav class="bg-white border-gray-200 dark:bg-gray-900 relative z-50 shadow-md rounded-lg p-4">
+  <nav
+    class="bg-white border-gray-200 dark:bg-gray-900 relative z-50 shadow-md rounded-lg px-4 py-2"
+  >
     <div class="flex flex-wrap items-center justify-between mx-auto">
       <!-- Logo -->
       <div class="flex items-center mb-0 gap-2">

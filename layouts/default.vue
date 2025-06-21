@@ -10,11 +10,10 @@ const links = ref([
 </script>
 
 <template>
-  <div class="flex">
+  <div>
     <LayoutSidebar />
-
-    <div class="ml-20 flex-1 flex flex-col min-h-screen">
-      <main class="flex-1 p-4 bg-gray-100 dark:bg-gray-900">
+    <div class="ml-16 flex-1 flex flex-col min-h-screen">
+      <main class="flex-1 p-3 bg-gray-100 dark:bg-gray-700">
         <NavigationBar :links="links" />
         <div class="py-4">
           <slot />
