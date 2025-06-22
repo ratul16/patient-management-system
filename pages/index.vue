@@ -6,7 +6,8 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="container mx-auto">
+  <div class="mx-auto">
+    <PaitentView />
     <header class="mx-auto px-6 py-20 text-center">
       <h1 class="text-5xl font-bold mb-2">Build Your Next Big Thing</h1>
       <p class="text-xl mb-8">A powerful and flexible starter template for your next project.</p>

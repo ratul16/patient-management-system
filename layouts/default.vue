@@ -13,10 +13,10 @@ const links = ref([
   <div>
     <LayoutSidebar />
     <div class="ml-16 flex-1 flex flex-col min-h-screen">
-      <div class="p-2">
+      <div class="p-4">
         <NavigationBar :links="links" />
       </div>
-      <main class="flex-1 p-4 bg-gray-100 dark:bg-gray-700">
+      <main class="flex-1 px-4 bg-gray-100 dark:bg-gray-700">
         <slot />
       </main>
     </div>

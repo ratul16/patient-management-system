@@ -2,12 +2,12 @@
 import BrandLogo from '~/components/BrandLogo.vue'
 
 const sidebarLinks = [
-  { label: 'Dashboard', icon: 'i-heroicons-squares-2x2', to: '/' },
-  { label: 'Appointments', icon: 'i-heroicons-calendar', to: '/appointments' },
-  { label: 'Reports', icon: 'i-heroicons-document-text', to: '/reports' },
-  { label: 'Medications', icon: 'i-heroicons-beaker', to: '/medications' },
-  { label: 'Patients', icon: 'i-heroicons-user-group', to: '/patients' },
-  { label: 'Profile', icon: 'i-heroicons-user', to: '/profile' },
+  { label: 'Dashboard', icon: 'fa6-solid:hospital', to: '/' },
+  { label: 'Appointments', icon: 'fa6-solid:user-doctor', to: '/appointments' },
+  { label: 'Patients', icon: 'fa6-solid:user-injured', to: '/patients' },
+  { label: 'Medications', icon: 'fa6-solid:pills', to: '/medications' },
+  { label: 'Reports', icon: 'fa6-solid:file-contract', to: '/reports' },
+  { label: 'Profile', icon: 'fa6-solid:user', to: '/profile' },
 ]
 </script>
 
@@ -15,7 +15,7 @@ const sidebarLinks = [
   <aside
     class="w-16 bg-white dark:bg-gray-900 h-screen fixed top-0 left-0 shadow-lg flex flex-col rounded-tr-2xl rounded-br-2xl overflow-hidden"
   >
-    <div class="mt-4 mb-8 flex items-center justify-center">
+    <div class="mt-2 mb-2 flex items-center justify-center border-b-1 pb-3">
       <BrandLogo class="w-10 h-10" />
     </div>
 

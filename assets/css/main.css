@@ -6,3 +6,11 @@ body {
   font-family: var(--font-sans);
   @apply bg-gray-100 dark:bg-gray-700;
 }
+
+.element-bg {
+  @apply bg-white dark:bg-gray-900;
+}
+
+.element-header {
+  @apply text-brand-primary-light dark:text-brand-secondary;
+}
