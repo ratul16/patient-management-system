@@ -26,7 +26,7 @@ const sidebarLinks = [
             :to="link.to"
             class="flex items-center justify-center py-3 px-4 text-brand-primary dark:text-white hover:bg-border-color dark:hover:bg-brand-primary transition-colors duration-200"
             :class="{
-              'bg-border-color text-brand-secondary-500 dark:bg-brand-primary':
+              'bg-border-color text-brand-secondary-500 dark:bg-brand-primary-light':
                 $route.path === link.to,
             }"
           >

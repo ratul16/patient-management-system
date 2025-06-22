@@ -22,7 +22,10 @@
         </ul>
       </div>
     </div>
-    <div class="footer border-t-1 p-4 text-center" @click="$router.push({ name: 'appointments' })">
+    <div
+      class="border-t border-gray-200 dark:border-gray-700 p-4 text-center text-brand-primary-500 dark:text-brand-primary-400 cursor-pointer hover:bg-gray-50 dark:hover:bg-brand-primary-light transition-colors duration-200"
+      @click="$router.push({ name: 'appointments' })"
+    >
       See all appointments
     </div>
   </div>
